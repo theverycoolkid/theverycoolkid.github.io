@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<title>The Zone</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="The Zone - Logo.png" />
+</head>
+<style>
+h1,h2,h3,h4,h5,h6 {
+font-family: "Oswald"
+}
+
+body {
+font-family: "Open Sans"
+}
+
+/*smooth scrolling*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*end of smooth scrolling*/
+
+/*NAV BAR CSS CODE*/
+body {
+  z-index: 1;
+}
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:2;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+ 
+ 
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+ 
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: black;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/*END OF NAV CSS CODE*/
+
+</style>
+
+<!--<body class="w3-light-grey">-->
+
+<!--NAV BAR -->
+<div class="topnav" id="myTopnav">
+  <a href="DO NOT PUT A LINK HERE">The Zone - Tech, Sleep, Game |</a>
+ 
+  <div class="dropdown">
+    <button class="dropbtn">Tech &#x25BC</button>
+    <div class="dropdown-content">
+      <a href="#">Apple</a>
+      <a href="#">Samsung</a>
+      <a href="#">Google</a>
+      <a href="#">Tesla</a>
+      <a href="#">Microsoft</a>
+      <a href="#">Amazon</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">Reviews &#x25BC</button>
+    <div class="dropdown-content">
+      <a href="#">Phones</a>
+      <a href="#">Laptops</a>
+      <a href="#">Smart Watches</a>
+      <a href="#">Headphones</a>
+      <a href="#">Tablets</a>
+      <a href="#">Speakers</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">Code &#x25BC</button>
+    <div class="dropdown-content">
+      <a href="#">Html</a>
+      <a href="#">CSS</a>
+      <a href="#">Python</a>
+      <a href="#">Command Line</a>
+    </div>
+  </div> 
+  
+  <div class="dropdown">
+    <button class="dropbtn">Entertainement &#x25BC</button>
+    <div class="dropdown-content">
+      <a href="#">Fortnite</a>
+      <a href="#">Film</a>
+      <a href="#">Gaming</a>
+      <a href="#">Netflix Shows</a>
+      <a href="#">Top chart music</a>
+      <a href="#">Games</a>
+    </div>
+  </div> 
+
+  <div class="dropdown">
+    <button class="dropbtn">More &#x25BC</button>
+    <div class="dropdown-content">
+      <a href="#">About me</a>
+      <a href="#">Request a topic</a>
+      <a href="#">Socials</a>
+
+    </div>
+  </div> 
+
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div style="padding-left:16px">
+ 
+</div>
+
+<!--END OF NAV BAR CODE-->
+  
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+
+<div class="w3-content" style="max-width:1600px"></div>
+
+  <!-- Header with title and button to scroll down -->
+  <!--<header class="w3-container w3-center w3-padding-48 w3-white" id="home">-->
+   <!--<h1 class="w3-xxxlarge"><b>The Zone</b></h1>-->
+    
+    <!--<h6><span class="w3-tag">Latest News In One Spot</span></h6>-->
+
+    <!--<a href="#section1" class="w3-btn w3-black">Click Me to start, We Will Find The Best Article for You.</a>-->
+
+<!--Banner with website title-->
+<div class="container">
+  <img class="w3-image" src="Thezone70.gif" alt="The Zone - Tech and more" width="1600" height="900">
+</div>
+
+
+  <!--</header>-->
+  <!-- Image header -->
+  <div class="main" id="section1"> <!--This line is identifying the section for smooth scrolling-->
+  
+  <!--Original picture link : https://images.wallpaperscraft.com/image/chip_circuit_processor_140251_1600x900.jpg-->
+   <!--<img class="w3-image" src="banner 1600x500.jpg" alt="The Zone - Tech and more" width="1600" height="900"><div class="w3-display-left w3-padding-large"></div><h1 class="w3-jumbo w3-text-white w3-big centered"><b>THE ZONE</b></h1><h6><span class="w3-tag">Latest News In One Spot</span></h6></div></div></header>-->
+
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
+
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+    
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Microsoft needing to fix Windows 10 bug that can corrupt a hard drive just by looking at an icon</h3>
+          <h5>A bizarre Windows bug for 2021 <span class="w3-opacity">| Jan 24, 2021</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <figure>
+          <img src="https://i.pcmag.com/imagery/lineups/06xskoAKsVIlA7WdtvUGQmT-1.1577756249.fit_lim.size_1182x667.jpg" alt="microsoft windows 10" style="width:100%" class="w3-padding-16">
+          <figcaption>Source: PCmag.com</figcaption> 
+        </figure>
+          <p><strong>Microsoft</strong> says it’s planning to fix a bizarre Windows 10 bug that could corrupt a hard drive just by 
+            looking at an icon. Security researcher Jonas L first warned about the bug earlier this week, describing it as a “nasty vulnerability.”
+             Attackers can hide a specially crafted line inside a ZIP file, folder, or even a simple Windows shortcut. All a Windows 10 user 
+             needs to do is extract the ZIP file or simply look at a folder that contains a malicious shortcut and it will automatically trigger hard drive corruption
+           </p>
+          <p>Will Dormann, a vulnerability analyst at the CERT Coordination Center (CERT/CC), confirmed the findings, and notes that there could be more ways to trigger the NTFS corruption. Dormann also revealed the vulnerability has existed in Windows 10 
+            for nearly three years, and that he reported another NTFS issue two years ago that still hasn’t been fixed.</p>
+    <p>“We are aware of this issue and will provide an update in a future release,” says a Microsoft spokesperson in a statement to The Verge. </p>
+    <p>Others have found that the vulnerability also occurs if you simply paste the offending string into the address bar in a browser. Bleeping Computer has also tested the bug in a variety of different ways, and notes that it will prompt Windows 10 users to reboot a PC to repair the corrupted disk records. 
+      The reboot will trigger the Windows chkdsk process, which should successfully repair the corruption.</p>      
+      <p>The repair process isn’t always automatic, though. Dormann says it may require manual intervention to successfully repair the corrupted disk records. The bug also doesn’t require admin rights to trigger or special write permissions. 
+        That could make it more problematic for IT admins if chkdsk fails to automatically repair affected drives.</p>
+        <p>Sources The verge.com</p>
+    <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-clear"></p>
+          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+            <hr>              
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Razer has created a concept N95 mask with RGB and voice projection</h3>
+          <h5>Of course, it has RGB LEDs<span class="w3-opacity"> | Jan 24 2021</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <figures>
+          <img src="Razorn95.gif" alt="Men in Hats" style="width:100%" class="w3-padding-16">
+        <figcaption>Video Source Razor</figcaption>
+        </figures>
+          <p><strong>Razer</strong> claims to have made the world’s smartest mask: its new reusable N95 respirator called Project Hazel.</p>
+          <p>It’s a concept design with a glossy outside shell made of waterproof and scratch-resistant recycled plastic, 
+            which is transparent to allow for lip-reading and seeing facial cues when you chat with people.</p>
+            <p>Currently, there isn’t a price or release date attached. Razer refers to Project Hazel as a surgical N95, but it hasn’t
+               yet earned any of the necessary approvals and certifications from the Food and Drug Administration, the Centers for Disease Control
+                and Prevention, or Occupational Safety and Health Administration. In a statement to The Verge, 
+              Razer said it is working with a team of medical experts and scientists who are helping to develop the mask.</p>
+              <p>The main features of this mask lie within its two circular zones that flank your mouth. They’re used for ventilation, giving the 
+                device an almost futuristic gas mask look. Razer claims Project Hazel will use active disc-type ventilators, filtering air that’s 
+                breathed in, as well as the CO2 that’s being exhaled. The company adds that it will be certified
+                 to filter 95 percent of airborne particles, including the COVID-19 virus and other common pathogens.</p>
+                 <p>These ventilators are detachable and rechargeable, though Razer is still hammering out the details on two very important factors: 
+                   how long they’ll be effective and how Razer will alert the user when it’s time for a new one. A spokesperson told The Verge that the 
+                   ventilators’ longevity is still being tested, 
+                   and when the filters need to be changed, Razer envisions users being notified via a mobile companion app.</p>
+                   <p>Microphones and amplifiers embedded in the ventilators will project your voice through the mask, so you won’t have to worry about 
+                     sounding muffled. We haven’t seen this in action yet or had the chance to try it out ourselves. Razer told us that it’s working with THX 
+                     sound engineers to find a balance in terms of how loud the speakers should be for accessibility purposes.</p>
+                     <p>Of course, this wouldn’t be a modern Razer product if it didn’t support Chroma RGB LEDs. Each of the respirator-meets-amplifier
+                        rings can glow in the color of your choosing. And when it gets dark, a set of LEDs activate automatically to shine light on your 
+                        mouth so others can still see you talk. It’s tough to tell 
+                       just how effective these LEDs will be in fully illuminating your mouth, but they may be helpful nevertheless.</p>
+                       <p>Sources The verge</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          <div id="demo2" style="display:none">
+            <div class="w3-row">
+              <hr>
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_train.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Amber <span class="w3-opacity w3-medium">April 26, 2015, 10:52 PM</span></h4>
+                <p>Love your blog page! Simply the best! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Angie <span class="w3-opacity w3-medium">April 23, 2015, 9:12 PM</span></h4>
+                <p>Love hats!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Hack together your own e-paper smartwatch with this $50 open-source kit</h3>
+          <h5>An Arduino powered wrist computer you can program <span class="w3-opacity">| January 24 2021</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <figure>
+          <img src="https://cdn.vox-cdn.com/thumbor/HXmlS1NWlCYNqxb-uSMj5TlFXTg=/0x0:2401x1600/920x613/filters:focal(1009x608:1393x992):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/68665157/2020_12_18T19_22_27.654Z_P1010103_Edit.0.jpg" alt="CodeScreen" style="width:100%" class="w3-padding-16">
+          <figcaption>Source The verge</figcaption>
+        </figure>
+          <p> If you’ve ever wanted to be like Steve Wozniak and have your own custom-made, geeky watch, Squarofumi (stylized SQFMI) may have the
+             product for you: an open-source, Arduino-powered smartwatch with a 1.54-inch e-paper screen (via Gizmodo). It’s called the Watchy, and 
+             both the hardware and software are completely customizable. You can, however, use it right out of the box, as the PCB acts as the body 
+            and has points to attach a watch strap. And to top it all off, it’s only $50, on sale for $45 at time of writing.</p>
+            <p>The SQFMI site has sections for watch faces and cases, but at the moment they both only say “Coming Soon,” so if you're thinking 
+              about this watch, you’ll definitely want to make sure you’re ready for a DIY project. Oh, and there’s also the fact that the watch 
+              doesn’t come assembled — you have to put it together yourself, hooking the 200x200 display, PCB, and 200mAh battery together. 
+              There’s Wi-Fi, Bluetooth,
+              a 3-axis accelerometer and four buttons that can be used for navigation, or whatever other functions you can dream up.</p>
+              <p>If having to put together the hardware yourself doesn’t intimidate you, there’s one last thing to note: while the watch does come with pre-loaded software, if you want to make any changes to the watch face you’ll have to download the Arduino IDE and program them yourself.
+
+              </p>
+              <p>While some people may be turned off by all the work required to get the watch working, to certain people the build-it-yourself approach means that they’ll be able to get exactly what they want. If you want a watch with a case that looks like an iPod or Game Boy, with an interface to match, you can 3D print a case and code the watch face yourself. It’s the type of freedom you’re not likely
+                 to get from most commercial smartwatches, though Tizen and Wear OS watches do offer downloadable watch faces.</p>
+                 <p>The battery life SQFMI estimates depends on your use case — it says if you’re just keeping time you should get five to seven days, but if you’re fetching data frequently you may only see two to three. Its open-source nature, however, means that you could always fit a larger battery into it, or try and make some software optimizations if there are features you’re willing to cut.
+
+                </p>
+                <p>If you’re looking for this kind of coding/DIY project, the Watchy is being sold on Tindie. I’d just recommend you look at SQFMI’s website to make sure that the
+                   amount of documentation available is enough for you to get started.</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+         
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          <div id="demo3" style="display:none">
+            <hr>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_mountain.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Jane <span class="w3-opacity w3-medium">April 10, 2015, 7:22 PM</span></h4>
+                <p>That was a great runway show! Thanks for everything.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/boy.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>John <span class="w3-opacity w3-medium">April 8, 2015, 10:32 PM</span></h4>
+                <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="/w3images/girl_hood.jpg" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Anja <span class="w3-opacity w3-medium">April 7, 2015, 9:12 PM</span></h4>
+                <p>Cant wait for the runway to start!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- END BLOG ENTRIES -->
+    </div>
+
+    <!-- About/Information menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-black">
+          <h4>About this site</h4>
+          <p>All sources stated, if you would like content removed please email me @thezone@gmail.com</p>
+        </div>
+      </div>
+      <hr>
+       <!-- Advertising -->
+ <div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4>Advertise</h4>
+  </div>
+  <div class="w3-container w3-white">
+    <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+      <span class="w3-display-middle">Your AD Here</span>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- Advertising -->
+<div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4>Advertise</h4>
+  </div>
+  <div class="w3-container w3-white">
+    <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+      <span class="w3-display-middle">Your AD Here</span>
+    </div>
+  </div>
+</div>
+<hr>
+      <!-- Posts -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Popular Links</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <img src="https://lunawood.com/wp-content/uploads/2018/02/placeholder-image-300x225.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Article Title</span>
+            <br>
+            <span>Article Description</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://lunawood.com/wp-content/uploads/2018/02/placeholder-image-300x225.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Article Title</span>
+            <br>
+            <span>Article Description</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://lunawood.com/wp-content/uploads/2018/02/placeholder-image-300x225.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Article Title</span>
+            <br>
+            <span>Article Description</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://lunawood.com/wp-content/uploads/2018/02/placeholder-image-300x225.png" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+            <span class="w3-large">Article Title</span>
+            <br>
+            <span>Article Description</span>
+          </li>
+        </ul>
+      </div>
+      <hr>
+
+      <!-- Advertising -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Advertise</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+            <span class="w3-display-middle">Your AD Here</span>
+          </div>
+        </div>
+      </div>
+      <hr>
+<!-- Advertising -->
+<div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4>Advertise</h4>
+  </div>
+  <div class="w3-container w3-white">
+    <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+      <span class="w3-display-middle">Your AD Here</span>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- End of Advertising-->    
+
+      
+ <!-- Advertising -->
+ <div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4>Advertise</h4>
+  </div>
+  <div class="w3-container w3-white">
+    <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+      <span class="w3-display-middle">Your AD Here</span>
+    </div>
+  </div>
+</div>
+<hr>
+  <!-- End of Advertising-->   
+  <!-- Follow me-->   
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Follow Me</h4>
+        </div>
+        <div class="w3-container w3-xlarge w3-padding">
+          <a href="LINK" class="fa fa-facebook"></a>
+          <a href="LINK" class="fa fa-twitter"></a>
+          <a href="LINK" class="fa fa-google"></a>
+          <a href="LINK" class="fa fa-linkedin"></a>
+          <a href="LINK" class="fa fa-youtube"></a>
+          <a href="LINK" class="fa fa-instagram"></a>
+          <a href="LINK" class="fa fa-pinterest"></a>
+          <a href="LINK" class="fa fa-snapchat-ghost"></a>
+        </div>
+      </div>
+      <hr>
+
+       <!-- Advertising -->
+       <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Advertise</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+            <span class="w3-display-middle">Your AD Here</span>
+          </div>
+        </div>
+      </div>
+      <hr>
+<!-- End of Advertising-->   
+
+<!-- Advertising -->
+<div class="w3-white w3-margin">
+  <div class="w3-container w3-padding w3-black">
+    <h4>Advertise</h4>
+  </div>
+  <div class="w3-container w3-white">
+    <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+      <span class="w3-display-middle">Your AD Here</span>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- End of Advertising-->  
+     
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div align = "center">
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p>Copywrite The Zone</p>
+  </div>
+</footer>
+
+<script>
+//this is the responsive nav bar
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+</script>
+
+</body>
+</html>
